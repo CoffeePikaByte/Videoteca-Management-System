@@ -1,0 +1,17 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+
+# User files
+*.user
+*.suo
+
+# ASP.NET Core
+appsettings.Development.json
+
+# Node
+node_modules/
+
+# Logs
+*.log
