@@ -5,14 +5,16 @@ namespace VideotecaAPI.Models
     public class Genero
     {
         [Required]
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(100)]
-        string Nombre { get; set; }
+        public string Nombre { get; set; }
 
         [Required]
         [MaxLength(500)]
-        string Descripcion { get; set; }
+        public string Descripcion { get; set; }
+
+        public ICollection<PeliculasGeneros> PeliculasGeneros { get; set; }
     }
 }

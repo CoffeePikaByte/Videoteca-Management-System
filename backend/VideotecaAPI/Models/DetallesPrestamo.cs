@@ -5,13 +5,17 @@ namespace VideotecaAPI.Models
     public class DetallesPrestamo
     {
         [Required]
-        int IdPersona { get; set; }
+        public int IdPelicula { get; set; }
+
+        public Pelicula Pelicula { get; set; }
 
         [Required]
-        int IdPrestamo { get; set; }
+        public int IdPrestamo { get; set; }
+
+        public Prestamo Prestamo { get; set; }
 
         [Required]
         [Range (0, int.MaxValue)]
-        int Cantidad { get; set; }
+        public int Cantidad { get; set; }
     }
 }

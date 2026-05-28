@@ -5,19 +5,19 @@ namespace VideotecaAPI.Models
     public class SucursalesPeliculas
     {
         [Required]
-        int IdSucursal {  get; set; }
+        public int IdSucursal {  get; set; }
 
         [Required]
-        Sucursal sucursal { get; set; }
+        public Sucursal sucursal { get; set; }
 
         [Required]
-        int IdPelicula { get; set; }
+        public int IdPelicula { get; set; }
 
         [Required]
-        Pelicula pelicula { get; set; }
+        public Pelicula pelicula { get; set; }
 
         [Required]
         [Range(1, int.MaxValue)]
-        int Cantidad { get; set; }
+        public int Cantidad { get; set; }
     }
 }

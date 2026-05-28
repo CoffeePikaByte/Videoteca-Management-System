@@ -5,25 +5,25 @@ namespace VideotecaAPI.Models
     public class Sucursal
     {
         [Required]
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(100)]
-        string Nombre { get; set; }
+        public string Nombre { get; set; }
 
         [Required]
-        int IdDireccion { get; set; }
+        public int IdDireccion { get; set; }
 
         [Required]
-        Direccion direccion { get; set; }
+        public Direccion Direccion { get; set; }
 
         [Required]
-        int IdTelefono { get; set; }
+        public int IdTelefono { get; set; }
 
         [Required]
-        Telefono telefono{ get; set; }
+        public Telefono Telefono{ get; set; }
 
         [Required]
-        bool Estado { get; set; }
+        public bool Estado { get; set; }
     }
 }

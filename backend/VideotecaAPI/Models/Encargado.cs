@@ -5,19 +5,19 @@ namespace VideotecaAPI.Models
     public class Encargado
     {
         [Required]
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        int IdPersona { get; set; }
+        public int IdPersona { get; set; }
 
         [Required]
-        Persona Persona { get; set; }
+        public Persona Persona { get; set; }
 
         [Required]
         [MaxLength(50)]
-        string CodigoIdentificacion { get; set; }
+        public string CodigoIdentificacion { get; set; }
 
         [Required]
-        DateTime FechaIngreso { get; set; }
+        public DateTime FechaIngreso { get; set; }
     }
 }

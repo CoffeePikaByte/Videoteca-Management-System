@@ -5,22 +5,22 @@ namespace VideotecaAPI.Models
     public class Cliente
     {
         [Required]
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
-        int IdPersona { get; set; }
+        public int IdPersona { get; set; }
 
         [Required]
-        Persona persona { get; set; }
+        public Persona persona { get; set; }
 
         [Required]
         [MaxLength(50)]
-        string Identificacion { get; set; }
+        public string Identificacion { get; set; }
 
         [Required]
         DateTime FechaRegistro { get; set; }
 
         [Required]
-        bool Activo { get; set; }
+        public bool Activo { get; set; }
     }
 }

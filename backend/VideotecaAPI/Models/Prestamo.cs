@@ -9,33 +9,33 @@ namespace VideotecaAPI.Models
 
         [Required]
         [MaxLength(50)]
-        string CodigoFacturacion { get; set; }
+        public string CodigoFacturacion { get; set; }
 
         [Required]
-        int IdCliente { get; set; }
+        public int IdCliente { get; set; }
 
         [Required]
-        Cliente cliente { get; set; }
+        public Cliente cliente { get; set; }
 
         [Required]
-        int IdEncargado { get; set; }
+        public int IdEncargado { get; set; }
 
         [Required]
-        Encargado encargado { get; set; }
+        public Encargado encargado { get; set; }
 
         [Required]
-        int IdSucursal {  get; set; }
+        public int IdSucursal {  get; set; }
 
         [Required]
-        Sucursal sucursal { get; set; }
+        public Sucursal sucursal { get; set; }
 
         [Required]
-        DateTime FechaPrestamo { get; set; }
+        public DateTime FechaPrestamo { get; set; }
 
-        DateTime? FechaLimiteDevolucion { get; set; }
+        public DateTime? FechaLimiteDevolucion { get; set; }
 
         [Required]
-        bool Estado {  get; set; }
+        public bool Estado {  get; set; }
 
     }
 }

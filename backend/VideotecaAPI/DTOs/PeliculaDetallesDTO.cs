@@ -1,13 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using VideotecaAPI.Models;
 
-namespace VideotecaAPI.Models
+namespace VideotecaAPI.DTOs
 {
-    public class Pelicula
+    public class PeliculaDetallesDTO
     {
-
-        [Key]
         public int Id { get; set; }
-
         public string Titulo { get; set; }
 
         public int AnioLanzamiento { get; set; }
@@ -16,10 +14,10 @@ namespace VideotecaAPI.Models
 
         public int DuracionMin { get; set; }
 
-        public int IdCategoria { get; set; }
+        public string Categoria { get; set; }
 
-        public Categoria Categoria { get; set; }
+        public int EdadMinima { get; set; }
 
-        public ICollection<PeliculasGeneros> PeliculaGeneros { get; set; }
+        public ICollection<string> Generos { get; set; } = new List<string>();
     }
 }

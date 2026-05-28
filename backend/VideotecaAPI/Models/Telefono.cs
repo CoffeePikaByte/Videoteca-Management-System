@@ -5,11 +5,11 @@ namespace VideotecaAPI.Models
     public class Telefono
     {
         [Required]
-        int Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(20)]
-        string Numero { get; set; }
+        public string Numero { get; set; }
 
     }
 }

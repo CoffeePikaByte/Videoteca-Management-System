@@ -6,16 +6,16 @@ namespace VideotecaAPI.Models
     {
 
         [Required]
-        int IdGenero { get; set; }
+        public int IdGenero { get; set; }
 
         [Required]
-        Genero genero { get; set; }
+        public Genero Genero { get; set; }
 
         [Required]
-        int IdPelicula { get; set; }
+        public int IdPelicula { get; set; }
 
         [Required]
-        Pelicula pelicula { get; set; }
+        public Pelicula Pelicula { get; set; }
 
     }
 }
