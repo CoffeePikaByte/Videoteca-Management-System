@@ -6,12 +6,13 @@ obj/
 # User files
 *.user
 *.suo
+*.crt
 
 # ASP.NET Core
 appsettings.Development.json
 
 # Node
 node_modules/
-
+dist/
 # Logs
 *.log
