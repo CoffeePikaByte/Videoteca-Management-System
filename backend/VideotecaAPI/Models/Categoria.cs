@@ -14,5 +14,7 @@ namespace VideotecaAPI.Models
         [Required]
         [Range(0, 18)]
         public int EdadMinima { get; set; }
+
+        public ICollection<Pelicula> Peliculas { get; set; }
     }
 }

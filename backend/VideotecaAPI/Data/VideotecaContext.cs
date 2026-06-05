@@ -69,6 +69,11 @@ namespace VideotecaAPI.Data
 
                 });
 
+            modelBuilder.Entity<Pelicula>()
+                .HasOne(p => p.Categoria)
+                .WithMany(c => c.Peliculas)
+                .HasForeignKey(p => p.IdCategoria);
+
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -23,5 +23,8 @@ namespace VideotecaAPI.DTOs
 
         [Required]
         public int IdCategoria { get; set; }
+
+        [Required]
+        public ICollection<int> IdGeneros { get; set; }
     }
 }
