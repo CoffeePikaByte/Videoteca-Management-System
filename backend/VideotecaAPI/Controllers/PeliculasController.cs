@@ -147,13 +147,16 @@ namespace VideotecaAPI.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult> EliminarPelicula(int id)
         { 
-            var pelicula = await _context.Peliculas.FirstOrDefaultAsync(p => p.Id == id);
+            var pelicula = await _context.Peliculas
+            .Include(p => p.PeliculaGeneros)
+            .FirstOrDefaultAsync(p => p.Id == id);
 
             if (pelicula == null)
             {
                 return NotFound();
             }
 
+            _context.PeliculasGeneros.RemoveRange(pelicula.PeliculaGeneros);
             _context.Peliculas.Remove(pelicula);
 
             _context.SaveChanges();
