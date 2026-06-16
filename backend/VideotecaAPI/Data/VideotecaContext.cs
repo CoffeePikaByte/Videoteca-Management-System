@@ -96,7 +96,15 @@ namespace VideotecaAPI.Data
                 .WithOne()
                 .HasForeignKey<Persona>(p => p.IdTelefono);
 
-            
+            modelBuilder.Entity<Sucursal>()
+                .HasOne(s => s.Direccion)
+                .WithOne()
+                .HasForeignKey<Sucursal>(s => s.IdDireccion);
+
+            modelBuilder.Entity<Sucursal>()
+                .HasOne(s => s.Telefono)
+                .WithOne()
+                .HasForeignKey<Sucursal>(s => s.IdTelefono);
 
             base.OnModelCreating(modelBuilder);
         }
