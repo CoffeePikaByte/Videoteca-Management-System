@@ -74,6 +74,25 @@ namespace VideotecaAPI.Data
                 .WithMany(c => c.Peliculas)
                 .HasForeignKey(p => p.IdCategoria);
 
+
+
+            modelBuilder.Entity<Cliente>()
+                .HasOne(c => c.persona)
+                .WithOne()
+                .HasForeignKey<Cliente>(c => c.IdPersona);
+
+            modelBuilder.Entity<Persona>()
+                .HasOne(p => p.Direcciones)
+                .WithOne()
+                .HasForeignKey<Persona>(p => p.IdDirecciones);    
+
+            modelBuilder.Entity<Persona>()
+                .HasOne(p => p.Telefono)
+                .WithOne()
+                .HasForeignKey<Persona>(p => p.IdTelefono);
+
+            
+
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -23,6 +23,7 @@ namespace VideotecaAPI.Models
         public string? Distrito { get; set; }
 
         [MaxLength(500)]
-        public string? IndicacionesEspecificas { get; set; }
+        public string? IndicacionesAdiccionales { get; set; }
+
     }
 }
