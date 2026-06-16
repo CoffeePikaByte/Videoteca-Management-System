@@ -76,6 +76,11 @@ namespace VideotecaAPI.Data
 
 
 
+            modelBuilder.Entity<Encargado>()
+                .HasOne(e => e.Persona)
+                .WithOne()
+                .HasForeignKey<Encargado>(e => e.IdPersona);
+                    
             modelBuilder.Entity<Cliente>()
                 .HasOne(c => c.persona)
                 .WithOne()
