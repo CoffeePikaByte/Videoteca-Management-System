@@ -16,6 +16,6 @@ namespace VideotecaAPI.Models
 
         [Required]
         [Range (0, int.MaxValue)]
-        public int Cantidad { get; set; }
+        public int CantidadPelicula { get; set; }
     }
 }

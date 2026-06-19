@@ -60,6 +60,7 @@ namespace VideotecaAPI.Data
                     dp.IdPrestamo,
                     dp.IdPelicula
                 });
+                
 
             modelBuilder.Entity<SucursalesPeliculas>()
                 .HasKey(sp => new
@@ -105,6 +106,35 @@ namespace VideotecaAPI.Data
                 .HasOne(s => s.Telefono)
                 .WithOne()
                 .HasForeignKey<Sucursal>(s => s.IdTelefono);
+
+            modelBuilder.Entity<Prestamo>()
+                .HasOne(p => p.cliente)
+                .WithOne()
+                .HasForeignKey<Prestamo>(p => p.IdCliente);
+
+            modelBuilder.Entity<Prestamo>()
+                .HasOne(p => p.encargado)
+                .WithOne()
+                .HasForeignKey<Prestamo>(p => p.IdEncargado);
+
+            modelBuilder.Entity<Prestamo>()
+                .HasOne(p => p.sucursal)
+                .WithOne()
+                .HasForeignKey<Prestamo>(p => p.IdSucursal);
+
+            
+            modelBuilder.Entity<DetallesPrestamo>()
+                .HasOne(dp => dp.Pelicula)
+                .WithMany()
+                .HasForeignKey(dp => dp.IdPelicula);
+
+            modelBuilder.Entity<DetallesPrestamo>()
+                .HasOne(dp => dp.Prestamo)
+                .WithMany()
+                .HasForeignKey(dp => dp.IdPrestamo);
+
+            
+
 
             base.OnModelCreating(modelBuilder);
         }
